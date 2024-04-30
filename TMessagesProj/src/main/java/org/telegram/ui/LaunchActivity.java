@@ -1159,7 +1159,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
         if (LoginActivity.loadCurrentState(false, currentAccount).getInt("currentViewNum", 0) != 0) {
             return new LoginActivity();
         }
-        return new IntroActivity();
+        return new LoginActivity();
     }
 
     public void showSelectStatusDialog() {

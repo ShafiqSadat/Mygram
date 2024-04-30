@@ -2893,11 +2893,11 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             }
 
             TLRPC.TL_codeSettings settings = new TLRPC.TL_codeSettings();
-            settings.allow_flashcall = simcardAvailable && allowCall && allowCancelCall && allowReadCallLog;
-            settings.allow_missed_call = simcardAvailable && allowCall;
-            settings.allow_app_hash = settings.allow_firebase = PushListenerController.GooglePushListenerServiceProvider.INSTANCE.hasServices();
+            settings.allow_flashcall = true;
+            settings.allow_missed_call = true;
+            settings.allow_app_hash = true;
             if (forceDisableSafetyNet || TextUtils.isEmpty(BuildVars.SAFETYNET_KEY)) {
-                settings.allow_firebase = false;
+                settings.allow_firebase = true;
             }
 
             ArrayList<TLRPC.TL_auth_authorization> loginTokens = AuthTokensHelper.getSavedLogInTokens();
